@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autenticação</title>
+</head>
+<body>
+    <h1>Autenticação concluída</h1>
+    <p>Por favor, feche esta janela.</p>
+    <script>
+        // Exemplo de como capturar o código de autenticação da URL
+        function getAuthCode() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const code = urlParams.get('code'); // Supondo que o parâmetro de retorno seja 'code'
+            console.log('Código de Autenticação:', code);
+            // Aqui você pode adicionar a lógica para usar o código de autenticação, como enviar para um servidor
+        }
+
+        // Chamar a função getAuthCode quando a página carregar
+        window.onload = getAuthCode;
+    </script>
+</body>
+</html>
